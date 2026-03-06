@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you&me curry 夜営業のご予約</title>
+    <!-- Google Fontsの読み込み用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">you&me curry</div>
+            <div class="header-nav">
+                <a href="https://www.instagram.com/youandme_curry/" target="_blank" class="nav-instagram"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <button class="btn btn-sm btn-accent open-modal-btn">予約する</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- メインビジュアル -->
+        <section class="hero">
+            <div class="hero-image">
+                <!-- プレースホルダー画像: 夜の雰囲気や料理の写真 -->
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=800&h=500"
+                    alt="夜の店内の雰囲気" class="responsive-img">
+            </div>
+            <div class="hero-content">
+                <h2 class="hero-copy">夜のyou&me curryで、<br>スパイス料理と心地よい時間を。</h2>
+                <div class="hero-info">
+                    <p>営業時間：18:00～24:00頃（変更の可能性あり）</p>
+                    <p>定休日：火曜日</p>
+                </div>
+                <button class="btn btn-lg btn-main open-modal-btn">ご予約はこちら</button>
+            </div>
+        </section>
+
+        <!-- 店舗概要 -->
+        <section class="section about">
+            <div class="container">
+                <h3 class="section-title">店舗概要</h3>
+                <p class="about-text">
+                    you&me curryは、スパイス料理を気軽に楽しめる夜営業の飲食店です。ジャークチキンやタコスをはじめ、こだわりの料理と心地よい空間で、日常使いからグループ利用まで幅広くご利用いただけます。
+                </p>
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th>店名</th>
+                            <td>you&me curry（ユーアンドミーカレー）</td>
+                        </tr>
+                        <tr>
+                            <th>営業時間</th>
+                            <td>18:00～24:00頃</td>
+                        </tr>
+                        <tr>
+                            <th>定休日</th>
+                            <td>火曜日</td>
+                        </tr>
+                        <tr>
+                            <th>予算目安</th>
+                            <td>お一人様 3,000～4,000円</td>
+                        </tr>
+                        <tr>
+                            <th>座席数</th>
+                            <td>約20席（15～20名様で貸切対応可）</td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td><a href="tel:092-600-9969">092-600-9969</a></td>
+                        </tr>
+                        <tr>
+                            <th>アクセス</th>
+                            <td>福岡県福岡市中央区春吉2-17-1<br>渡辺通駅 徒歩5～10分</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- メニュー紹介 -->
+        <section class="section menu">
+            <div class="container">
+                <h3 class="section-title">おすすめメニュー</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400&h=300"
+                            alt="ジャークチキン" class="menu-img">
+                        <h4 class="menu-name">ジャークチキン</h4>
+                        <p class="menu-desc">スパイスに漬け込んだ自慢の逸品。（※詳細準備中）</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=400&h=300"
+                            alt="タコス" class="menu-img">
+                        <h4 class="menu-name">タコス</h4>
+                        <p class="menu-desc">お酒に合う本格タコス。（※詳細準備中）</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&q=80&w=400&h=300"
+                            alt="スパイス料理" class="menu-img">
+                        <h4 class="menu-name">スパイス料理各種</h4>
+                        <p class="menu-desc">季節のスパイス料理。（※詳細準備中）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 予約案内とフォーム -->
+        <section id="reservation-section" class="section reservation-bg">
+            <div class="container">
+                <div class="reservation-guide" style="border-radius: 12px; padding-bottom: 40px; text-align: center;">
+                    <h3 class="section-title">ご予約について</h3>
+                    <ul class="guide-list" style="text-align: left; max-width: 500px; margin: 0 auto 30px;">
+                        <li>ご予約は1名様から最大20名様まで承ります。</li>
+                        <li><strong>本予約は店舗確認後に確定となります。</strong></li>
+                        <li>予約の変更は前日まで可能です。（当日の変更は承っておりません）</li>
+                        <li>貸切は15～20名様程度で対応可能です。お気軽にご相談ください。</li>
+                        <li>滞在時間制限：店舗へお問い合わせください。</li>
+                        <li>コース料理：準備中 / 今後掲載予定</li>
+                    </ul>
+                    <button class="btn btn-lg btn-accent open-modal-btn" style="max-width:320px;">空席状況を確認して予約する</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス -->
+        <section class="section access">
+            <div class="container">
+                <h3 class="section-title">アクセス</h3>
+                <p class="access-text">福岡県福岡市中央区春吉2-17-1<br>渡辺通駅 徒歩5～10分<br>お問い合わせ: <a
+                        href="tel:092-600-9969">092-600-9969</a></p>
+                <div class="map-container">
+                    <!-- 福岡市 渡辺通 近辺のダミーマップ。表示用 -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8267233261765!2d130.40248277569106!3d33.58385287333671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541919a0a09e0a3%3A0xf63eb4c30cce8eb4!2z5rih6L666YCa6aeF!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-logo">you&me curry</h2>
+            <div class="footer-info">
+                <p>営業時間: 18:00～24:00頃 / 定休日: 火曜日</p>
+                <p>Tel: <a href="tel:092-600-9969">092-600-9969</a></p>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/youandme_curry/" target="_blank"
+                        aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; you&me curry All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 予約モーダル -->
+    <div id="reservation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" class="modal-title">ネット予約の空席状況</h3>
+                <button id="modal-close" class="modal-close">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <!-- ステップ1: カレンダー -->
+                <div id="step-calendar">
+                    <div class="calendar-nav">
+                        <button id="cal-prev" aria-label="前の月">&lt;</button>
+                        <div id="cal-month" class="calendar-month">2026年03月</div>
+                        <button id="cal-next" aria-label="次の月">&gt;</button>
+                    </div>
+                    <div id="calendar-container"></div>
+                    <div class="calendar-legend">
+                        <span style="color:#0288d1; font-weight:bold;">◎</span>：即予約可　<span
+                            style="color:#0288d1; font-size:18px; line-height:1;">□</span>：リクエスト予約可　<span
+                            style="color:#ffb300; font-weight:bold;">TEL</span>：要問い合わせ　<span
+                            style="color:#ccc;">×</span>：予約不可<br>
+                        休：定休日<br>
+                        <span
+                            style="color:#c62828; font-weight:bold; background:#ffebee; padding:0 4px;">P+</span>：通常よりポイントがお得にたまります
+                    </div>
+                </div>
+
+                <!-- ステップ2: 予約フォーム -->
+                <div id="step-form" style="display: none;">
+                    <p id="selected-date-display"
+                        style="font-weight: bold; font-size: 18px; margin-bottom: 15px; text-align: center; color: var(--color-accent); border-bottom: 1px dotted var(--color-border); padding-bottom: 10px;">
+                    </p>
+
+                    <form id="reservation-form" class="reservation-form">
+                        <input type="hidden" id="date" name="date">
+
+                        <div class="form-group row-group">
+                            <div class="half-group">
+                                <label for="time">来店時間 <span class="required">必須</span></label>
+                                <select id="time" name="time" required>
+                                    <option value="">未選択</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="22:30">22:30</option>
+                                    <option value="23:00">23:00</option>
+                                    <option value="23:30">23:30</option>
+                                </select>
+                            </div>
+                            <div class="half-group">
+                                <label for="people">人数 <span class="required">必須</span></label>
+                                <select id="people" name="people" required>
+                                    <option value="">未選択</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">必須</span></label>
+                            <input type="text" id="name" name="name" placeholder="例: 山田 太郎" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tel">電話番号 <span class="required">必須</span></label>
+                            <input type="tel" id="tel" name="tel" placeholder="例: 090-1234-5678" required
+                                pattern="[\d\-]+">
+                            <span id="tel-error" class="error-text" style="display:none;"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="optional"
+                                    style="background:#888; color:#fff; font-size:11px; padding:2px 6px; border-radius:4px; margin-left:6px; vertical-align:middle;">任意</span></label>
+                            <input type="email" id="email" name="email" placeholder="例: sample@example.com">
+                        </div>
+
+                        <div style="display:flex; gap:10px; margin-top: 30px;">
+                            <button type="button" id="btn-back-calendar" class="btn btn-lg"
+                                style="background:#eee; color:#333; flex:1; max-width:none; box-shadow:none;">戻る</button>
+                            <button type="submit" class="btn btn-lg btn-accent btn-submit"
+                                style="margin:0; flex:2; max-width:none;">予約を申し込む</button>
+                        </div>
+                        <p class="submit-note" style="margin-top: 15px;">※リクエスト予約の場合は、店舗からの連絡をお待ちください。</p>
+                    </form>
+                </div>
+
+                <!-- ステップ3: 完了メッセージ -->
+                <div id="step-success" class="form-message success" style="display: none; margin-bottom: 0;">
+                    <h4>予約申請を受け付けました。</h4>
+                    <p>内容を確認のうえ、店舗よりご連絡いたします。<br>※本予約は店舗確認後に確定となります。</p>
+                    <button type="button" id="btn-close-success" class="btn btn-main"
+                        style="margin-top:20px; width:100%;">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約管理画面 - you&me curry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: #f5f5f5;">
+    <!-- 管理画面用独自ヘッダー -->
+    <header class="admin-header">
+        <h1>you&me curry 予約管理ダッシュボード</h1>
+    </header>
+
+    <main class="admin-container">
+        <div class="admin-controls">
+            <h2>予約一覧</h2>
+            <button id="refresh-btn" class="btn btn-sm btn-main">最新データを読み込む</button>
+            <a href="index.html" class="btn btn-sm" style="background-color: #e0e0e0; color: #333;">予約サイトへ戻る</a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>受付日時</th>
+                        <th>来店日時</th>
+                        <th>お名前</th>
+                        <th>人数</th>
+                        <th>電話番号</th>
+                        <th>メールアドレス</th>
+                        <th>ステータス</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="reservation-tbody">
+                    <!-- JSでデータを出力 -->
+                </tbody>
+            </table>
+
+            <div id="empty-message" class="admin-empty" style="display: none;">
+                <p>現在、予約データはありません。</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

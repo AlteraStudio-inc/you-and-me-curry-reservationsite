@@ -1,0 +1,818 @@
+/* 基本設定 */
+:root {
+    --color-main: #f9d849;
+    /* 黄色 */
+    --color-main-dark: #e5c332;
+    --color-accent: #2e7d32;
+    /* 緑 */
+    --color-accent-dark: #1b5e20;
+    --color-bg: #fdfdfd;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-error: #d32f2f;
+    --color-border: #e0e0e0;
+    --font-family: 'Noto Sans JP', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-main);
+    border-radius: 2px;
+}
+
+/* ボタン共通仕様 */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    border-radius: 8px;
+    /* 角丸で親しみやすく */
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 300px;
+    font-weight: 700;
+}
+
+.btn-main {
+    background-color: var(--color-main);
+    color: var(--color-text);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-main:hover {
+    background-color: var(--color-main-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-accent:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    opacity: 1;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: var(--color-main);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-instagram {
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ヒーローセクション */
+.hero {
+    position: relative;
+    background-color: #000;
+}
+
+.hero-image {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    /* テキストを目立たせるために少し暗く */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    max-width: 600px;
+}
+
+.hero-copy {
+    font-size: clamp(20px, 5vw, 28px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-info {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-info p {
+    margin-bottom: 5px;
+}
+
+/* 店舗概要セクション */
+.about {
+    background-color: #fff;
+}
+
+.about-text {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-text-light);
+    font-size: 15px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.info-table th,
+.info-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.info-table th {
+    width: 30%;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.info-table td {
+    width: 70%;
+}
+
+@media (max-width: 480px) {
+
+    .info-table th,
+    .info-table td {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+        padding: 10px 0;
+    }
+
+    .info-table th {
+        padding-bottom: 0;
+        color: var(--color-accent);
+        font-size: 14px;
+    }
+
+    .info-table td {
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+/* メニューセクション */
+.menu {
+    background-color: #fafafa;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-name {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 15px 5px;
+}
+
+.menu-desc {
+    font-size: 14px;
+    color: var(--color-text-light);
+    padding: 0 15px 15px;
+}
+
+/* 予約エリア背景 */
+.reservation-bg {
+    background-color: #e8f5e9;
+    /* 薄い緑背景で親しみやすさ */
+}
+
+.reservation-guide {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.guide-list {
+    font-size: 14px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: var(--color-text);
+}
+
+.guide-list li {
+    margin-bottom: 8px;
+}
+
+.guide-list strong {
+    color: var(--color-error);
+}
+
+/* 予約フォーム */
+.reservation-form-container {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 1px dashed var(--color-border);
+}
+
+.form-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-text);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.required {
+    background-color: var(--color-error);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 16px;
+    /* スマホでズームされないための16px */
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.row-group {
+    display: flex;
+    gap: 15px;
+}
+
+.half-group {
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+    .row-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.error-text {
+    color: var(--color-error);
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+}
+
+.btn-submit {
+    margin: 30px auto 10px;
+    display: block;
+}
+
+.submit-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+/* 完了メッセージ */
+.form-message {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-message.success {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+}
+
+.form-message h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.form-message p {
+    font-size: 14px;
+}
+
+/* アクセス */
+.access {
+    background-color: #fff;
+    text-align: center;
+}
+
+.access-text {
+    margin-bottom: 20px;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* フッター */
+.footer {
+    background-color: var(--color-main);
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-info {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-sns {
+    margin-top: 15px;
+}
+
+.footer-sns a {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.copyright {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+/* 管理画面用スタイル */
+.admin-header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.admin-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 14px;
+}
+
+.admin-table th {
+    background-color: #f5f5f5;
+    font-weight: 700;
+    color: #333;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #fafafa;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-new {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.status-confirmed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.admin-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #888;
+}
+
+/* モーダル用スタイル */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--color-border);
+    background-color: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-text-light);
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* カレンダー用スタイル */
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-nav button {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.calendar-month {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid var(--color-border);
+    width: 14.28%;
+    padding: 8px 2px;
+    vertical-align: top;
+}
+
+.calendar-table th {
+    background-color: #f9f9f9;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 土日は色を変える */
+.calendar-table th:nth-child(6),
+.calendar-table td:nth-child(6) .date-num {
+    color: #0288d1;
+}
+
+.calendar-table th:nth-child(7),
+.calendar-table td:nth-child(7) .date-num {
+    color: #d32f2f;
+}
+
+.calendar-cell {
+    cursor: pointer;
+    height: 70px;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.calendar-cell:hover {
+    background-color: #f1f8e9;
+}
+
+.calendar-cell.disabled {
+    cursor: default;
+    background-color: #f5f5f5;
+}
+
+.calendar-cell.disabled:hover {
+    background-color: #f5f5f5;
+}
+
+.calendar-cell.past .date-num {
+    color: #ccc !important;
+}
+
+.date-num {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.status-mark {
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.status-ok {
+    color: #0288d1;
+    font-weight: bold;
+}
+
+/* ◎ */
+.status-req {
+    color: #0288d1;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* □ */
+.status-tel {
+    color: #ffb300;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* TEL */
+.status-ng {
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+/* × */
+
+.point-mark {
+    background-color: #ffebee;
+    color: #c62828;
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+    padding: 2px 0;
+    margin-top: 4px;
+}
+
+.calendar-legend {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    background: #fdfdfd;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
