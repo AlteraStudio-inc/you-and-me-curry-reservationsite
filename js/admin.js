@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     : `<button class="btn btn-sm btn-accent confirm-btn" data-id="${res.id}">予約を確定させる</button>`;
 
                 tr.innerHTML = `
-                    <td>${createdFormatted}</td>
-                    <td><strong>${res.date}</strong><br>${res.time}</td>
-                    <td>${res.name} 様</td>
-                    <td>${res.people}名</td>
-                    <td><a href="tel:${res.tel}">${res.tel}</a></td>
-                    <td><a href="mailto:${res.email}">メール送信</a></td>
-                    <td>${statusHtml}</td>
-                    <td>${actionBtnHtml}</td>
+                    <td data-label="受付日時">${createdFormatted}</td>
+                    <td data-label="来店日時"><strong>${res.date}</strong><br>${res.time}</td>
+                    <td data-label="お名前">${res.name} 様</td>
+                    <td data-label="人数">${res.people}名</td>
+                    <td data-label="電話番号"><a href="tel:${res.tel}">${res.tel}</a></td>
+                    <td data-label="メール">${res.email ? `<a href="mailto:${res.email}">メール送信</a>` : '-'}</td>
+                    <td data-label="ステータス">${statusHtml}</td>
+                    <td data-label="操作">${actionBtnHtml}</td>
                 `;
 
                 tbody.appendChild(tr);
