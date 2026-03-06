@@ -122,10 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     statusClass = 'status-req';
                 }
 
-                // ポイント加算アイコン (月〜水あたりに適当に付与)
-                if ((currDayOfWeek === 1 || currDayOfWeek === 3) && dayCount % 2 !== 0) {
-                    pointMark = `<span class="point-mark">Ⓟ+</span>`;
-                }
+
             }
 
             let cellClass = 'calendar-cell';

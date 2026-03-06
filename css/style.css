@@ -532,8 +532,9 @@ select:focus {
 }
 
 .admin-header h1 {
-    font-size: 20px;
+    font-size: clamp(14px, 4.5vw, 20px);
     text-align: center;
+    white-space: nowrap;
 }
 
 .admin-container {
