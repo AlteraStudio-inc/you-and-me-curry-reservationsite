@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗情報 | you&me curry</title>
+    <meta name="description" content="you&me curry 夜営業の店舗情報ページです。">
+    <!-- Google Fontsの読み込み用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background-color: var(--color-bg);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-text);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: var(--color-main);
+            border-radius: 2px;
+        }
+
+        .info-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .info-dl {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .info-dl div {
+            border-bottom: 1px dotted var(--color-border);
+            padding-bottom: 15px;
+        }
+
+        .info-dl div:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .info-dt {
+            font-weight: 700;
+            color: var(--color-accent);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .info-dd {
+            color: var(--color-text);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" style="color: var(--color-text);">you&me curry</a>
+            <div class="header-nav">
+                <a href="index.html" class="btn btn-sm btn-accent">予約する</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 20px;">
+        <div class="page-header">
+            <h1 class="page-title">店舗情報</h1>
+        </div>
+
+        <section class="info-card">
+            <div class="info-dl">
+                <div>
+                    <div class="info-dt">店舗名</div>
+                    <div class="info-dd">you&me curry（ユーアンドミーカレー）</div>
+                </div>
+                <div>
+                    <div class="info-dt">所在地</div>
+                    <div class="info-dd">福岡県福岡市中央区春吉2-17-1<br><small>※必要に応じて詳細を差し替えてください</small></div>
+                </div>
+                <div>
+                    <div class="info-dt">電話番号</div>
+                    <div class="info-dd"><a href="tel:092-600-9969">092-600-9969</a></div>
+                </div>
+                <div>
+                    <div class="info-dt">営業時間</div>
+                    <div class="info-dd">18:00〜24:00頃</div>
+                </div>
+                <div>
+                    <div class="info-dt">定休日</div>
+                    <div class="info-dd">火曜日</div>
+                </div>
+                <div>
+                    <div class="info-dt">座席数</div>
+                    <div class="info-dd">約20席</div>
+                </div>
+                <div>
+                    <div class="info-dt">貸切</div>
+                    <div class="info-dd">15〜20名程度で貸切対応可能</div>
+                </div>
+                <div>
+                    <div class="info-dt">予算目安</div>
+                    <div class="info-dd">お一人様 3,000〜4,000円</div>
+                </div>
+                <div>
+                    <div class="info-dt">アクセス</div>
+                    <div class="info-dd">渡辺通駅 徒歩5〜10分</div>
+                </div>
+                <div>
+                    <div class="info-dt">事業内容</div>
+                    <div class="info-dd">飲食店の運営</div>
+                </div>
+                <div>
+                    <div class="info-dt">運営責任者</div>
+                    <div class="info-dd">運営責任者名をここに入力</div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-bottom: 60px;">
+            <a href="index.html" class="btn btn-lg btn-accent" style="max-width:320px;">予約する</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-logo">you&me curry</h2>
+            <div class="footer-info">
+                <p>営業時間: 18:00～24:00頃 / 定休日: 火曜日</p>
+                <p>Tel: <a href="tel:092-600-9969">092-600-9969</a></p>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/youandme_curry/" target="_blank"
+                        aria-label="Instagram">Instagram</a>
+                </div>
+                <div class="footer-links" style="margin-top: 20px;">
+                    <a href="about.html" style="color: var(--color-text); margin: 0 15px; font-size: 14px;">店舗情報</a>
+                    <a href="privacy.html"
+                        style="color: var(--color-text); margin: 0 15px; font-size: 14px;">プライバシーポリシー</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; you&me curry All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
