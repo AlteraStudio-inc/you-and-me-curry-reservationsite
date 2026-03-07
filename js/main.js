@@ -226,10 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; // エラーがあれば送信処理を中断
             }
 
+            const genderInput = document.querySelector('input[name="gender"]:checked');
+            const genderValue = genderInput ? genderInput.value : '未選択';
+
             // ---- 予約データのオブジェクト作成 ----
             const reservationData = {
                 id: Date.now(),
                 name: document.getElementById('name').value,
+                gender: genderValue,
                 tel: document.getElementById('tel').value,
                 email: document.getElementById('email').value || '未入力', // 任意のため空の場合は未入力とする
                 date: document.getElementById('date').value,

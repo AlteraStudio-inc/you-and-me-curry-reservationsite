@@ -241,6 +241,21 @@
                         </div>
 
                         <div class="form-group">
+                            <label>代表者の性別 <span class="required">必須</span></label>
+                            <div style="display: flex; gap: 20px; padding: 10px 0;">
+                                <label style="font-weight: 400; display: flex; align-items: center; gap: 6px; margin: 0; cursor: pointer;">
+                                    <input type="radio" name="gender" value="男性" required> 男性
+                                </label>
+                                <label style="font-weight: 400; display: flex; align-items: center; gap: 6px; margin: 0; cursor: pointer;">
+                                    <input type="radio" name="gender" value="女性" required> 女性
+                                </label>
+                                <label style="font-weight: 400; display: flex; align-items: center; gap: 6px; margin: 0; cursor: pointer;">
+                                    <input type="radio" name="gender" value="無回答" required> 無回答
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="tel">電話番号 <span class="required">必須</span></label>
                             <input type="tel" id="tel" name="tel" placeholder="例: 090-1234-5678" required
                                 pattern="[\d\-]+">
